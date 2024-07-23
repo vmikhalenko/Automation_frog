@@ -1,6 +1,6 @@
 import pytest
-from endpoints.Create_Url_Endpoint import CreateUrlEndpoint
-from endpoints.Get_Url_Endpoint import GetUrlEndpoint
+from endpoints.create_url_endpoint import CreateUrlEndpoint
+from endpoints.get_url_endpoint import GetUrlEndpoint
 
 @pytest.fixture()
 def object_creator_endp():
