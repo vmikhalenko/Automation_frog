@@ -3,7 +3,7 @@
 import requests
 from endpoints.endpoints_handler import Endpoint
 
-class GetUrlEndpoint(Endpoint):
+class GetObjectEndpoint(Endpoint):
     def get_one_obj_by_id(self, id):
         response = requests.get(f'https://api.restful-api.dev/objects/{id}')
         self.status = response.status_code

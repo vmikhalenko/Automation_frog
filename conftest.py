@@ -1,14 +1,17 @@
 import pytest
-from endpoints.create_url_endpoint import CreateUrlEndpoint
-from endpoints.get_url_endpoint import GetUrlEndpoint
+from endpoints.create_object_endpoint import CreateObjectEndpoint
+from endpoints.get_object_endpoint import GetObjectEndpoint
+from endpoints.put_object_endpoint import PutObjectEndpoint
+from endpoints.patch_object_endpoint import PatchObjectEndpoint
+from endpoints.delete_object_endpoint import DeleteObjectEndpoint
 
 @pytest.fixture()
 def object_creator_endp():
-    return CreateUrlEndpoint()
+    return CreateObjectEndpoint()
 
 @pytest.fixture()
-def url_getter_endp():
-    return GetUrlEndpoint()
+def object_getter_endp():
+    return GetObjectEndpoint()
 
 @pytest.fixture()
 def create_object(object_creator_endp):
@@ -24,3 +27,14 @@ def create_object(object_creator_endp):
     object_creator_endp.add_new_object(body)
     return object_creator_endp.id, body
 
+@pytest.fixture()
+def object_update_endp():
+    return PutObjectEndpoint()
+
+@pytest.fixture()
+def object_part_update_endp():
+    return PatchObjectEndpoint()
+
+@pytest.fixture()
+def object_delete_endp():
+    return DeleteObjectEndpoint()

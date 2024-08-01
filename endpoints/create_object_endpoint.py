@@ -4,7 +4,7 @@ import requests
 from endpoints.endpoints_handler import Endpoint
 
 
-class CreateUrlEndpoint(Endpoint):
+class CreateObjectEndpoint(Endpoint):
     def add_new_object(self, body):
         response = requests.post(
             'https://api.restful-api.dev/objects',
