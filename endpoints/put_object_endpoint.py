@@ -1,9 +1,7 @@
 # creating framework
-import datetime
 
 import requests
 from endpoints.endpoints_handler import Endpoint
-from datetime import time
 
 class PutObjectEndpoint(Endpoint):
     def update_object(self, body):
