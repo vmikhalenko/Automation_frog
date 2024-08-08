@@ -1,3 +1,6 @@
+import pytest
+
+@pytest.mark.smoke
 def test_add_object(object_creator_endp):
     # test data
     body = {

@@ -1,3 +1,6 @@
+import pytest
+
+@pytest.mark.extended
 def test_put_object(object_update_endp):
     # test data
     body = {

@@ -1,3 +1,6 @@
+import pytest
+
+@pytest.mark.regression
 def test_update_part_of_object(object_part_update_endp):
     # test data
     body = {

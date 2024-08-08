@@ -1,3 +1,6 @@
+import pytest
+
+@pytest.mark.smoke
 def test_get_one_object(create_object, object_getter_endp):
     id, body = create_object
     object_getter_endp.get_one_obj_by_id(id)

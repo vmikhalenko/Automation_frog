@@ -1,3 +1,6 @@
+import pytest
+
+@pytest.mark.regression
 def test_delete_object(object_delete_endp):
     object_delete_endp.delete_object()
     object_delete_endp.check_response_status_is_ok()

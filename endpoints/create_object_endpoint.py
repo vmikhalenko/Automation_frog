@@ -22,4 +22,3 @@ class CreateObjectEndpoint(Endpoint):
 
     def check_name_same_as_sent(self):
         assert self.name == 'HP pro 18'
-
